@@ -1,0 +1,83 @@
+body {
+    background-color: rgb(70, 102, 129);
+    width: 80%;
+    margin: auto;
+}
+
+.header, footer {
+    text-align: center;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+
+.header {
+    text-transform: uppercase;
+}
+
+.main-container {
+    display: flex;
+    padding-bottom: 50px;
+}
+
+.input-container {
+    width: 200px;
+    height: 520px;
+    border-right: 20px solid rgb(88, 76, 76);
+    margin-left: 10%;
+}
+
+.buttons {
+    background-color: rgb(42, 100, 83);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80%;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+button {
+    width: 80%;
+    height: 18%;
+    margin-bottom: 12px;
+    background-color: cornflowerblue;
+    font-size: larger;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.grid-container {
+   width: 700px;
+   height: 500px;
+   border: 10px solid rgb(48, 29, 29);
+   background-color: white;
+
+}
+
+.many {
+    background-color: white;
+    box-sizing: border-box;
+    pointer-events: painted;
+    
+}
+
+.color-prefer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(16, 16, 66);
+    padding: 10px;
+    width: 180px;
+}
+
+#custom {
+    width: 150px;
+    border: none;
+    height: 50px;
+}
+
+footer {
+    padding-bottom: 10px;
+}
