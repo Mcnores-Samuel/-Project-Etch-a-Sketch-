@@ -13,8 +13,10 @@
  *      (checking and adding event listeners to all gridboxes)
  */
 
-const gridNumber = 30;
+
+const accessScale = document.querySelector("#scale");
 const gridContainer = document.querySelector(".grid-container");
+const choiceColor = document.querySelector("input");
 
 let createGrid = number => {
    for (let boxNumber = 0; boxNumber < number * number; boxNumber++){
@@ -56,7 +58,6 @@ let  renderMode = () => {
 }
 
 let buttonsFunctionality = () => {
-    const choiceColor = document.querySelector("input");
     const accessAllButtons = document.querySelectorAll("button");
     const gridDivs = document.querySelectorAll(".many");
 
@@ -66,14 +67,14 @@ let buttonsFunctionality = () => {
                 item.style.backgroundColor = choiceColor.value
                 item.style.color = "white"
                 gridDivs.forEach(element => {
-                    element.addEventListener("click", () => {
+                    element.addEventListener("mouseover", () => {
                         element.style.backgroundColor = choiceColor.value
                     })
                 })
             }
             else if (item.textContent == "Multiple Colors"){
                 gridDivs.forEach(item => {
-                    item.addEventListener("click", () => {
+                    item.addEventListener("mouseover", () => {
                         const num1 = Math.round(Math.random() * 255 + 1);
                         const num2 = Math.round(Math.random() * 255 + 1);
                         const num3 = Math.round(Math.random() * 255 + 1);
@@ -83,14 +84,14 @@ let buttonsFunctionality = () => {
             }
             else if (item.textContent == "Eraser"){
                 gridDivs.forEach(item => {
-                    item.addEventListener("click", () => {
+                    item.addEventListener("mouseover", () => {
                         item.style.backgroundColor = "white"
                     })
                 })
             }
             else if (item.textContent == "Clear"){
                 gridDivs.forEach(item => {
-                    item.style.backgroundColor = "white"
+                    item.style.backgroundColor = "white";
                 })
             }
         })
@@ -99,17 +100,9 @@ let buttonsFunctionality = () => {
 
 }
 
-let userChoiseColor = () => {
-    const gridDivs = document.querySelectorAll(".many");
-
-    gridDivs.forEach(item => {
-        item.addEventListener("click", () => {
-            item.style.backgroundColor = choiceColor.value;
-        })
-    })
-}
-
-createGrid(gridNumber);
+accessScale.addEventListener("change", () => {
+    window.location.reload()
+})
+createGrid(accessScale.value)
 renderMode();
 buttonsFunctionality();
-userChoiseColor();
