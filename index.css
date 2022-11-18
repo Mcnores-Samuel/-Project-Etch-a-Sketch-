@@ -88,3 +88,8 @@ button {
 footer {
     padding-bottom: 10px;
 }
+
+.scale {
+    display: flex;
+    flex-direction: column;
+}
