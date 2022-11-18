@@ -25,6 +25,13 @@ body {
     height: 520px;
     border-right: 20px solid rgb(88, 76, 76);
     margin-left: 10%;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+label {
+    margin-bottom: 5%;
 }
 
 .buttons {

@@ -24,7 +24,8 @@ let createGrid = number => {
    }
 
    gridContainer.setAttribute("style", `display: grid;
-   grid-template-columns: repeat(${number}, 1fr);`);
+   grid-template-columns: repeat(${number}, 1fr);
+   grid-template-rows: repeat(${number}, 1fr);`);
 }
 
 let  renderMode = () => {
@@ -55,17 +56,18 @@ let  renderMode = () => {
 }
 
 let buttonsFunctionality = () => {
+    const choiceColor = document.querySelector("input");
     const accessAllButtons = document.querySelectorAll("button");
     const gridDivs = document.querySelectorAll(".many");
 
     accessAllButtons.forEach(item => {
         item.addEventListener("click", () => {
             if(item.textContent == "Defualt Color"){
-                item.style.backgroundColor = "#1B9970"
+                item.style.backgroundColor = choiceColor.value
                 item.style.color = "white"
                 gridDivs.forEach(element => {
                     element.addEventListener("click", () => {
-                        element.style.backgroundColor = "#1B9970"
+                        element.style.backgroundColor = choiceColor.value
                     })
                 })
             }
@@ -98,7 +100,6 @@ let buttonsFunctionality = () => {
 }
 
 let userChoiseColor = () => {
-    const choiceColor = document.querySelector("input");
     const gridDivs = document.querySelectorAll(".many");
 
     gridDivs.forEach(item => {
