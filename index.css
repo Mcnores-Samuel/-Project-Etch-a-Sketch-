@@ -16,6 +16,7 @@ body {
 
 .main-container {
     display: flex;
+    padding: 20px;
 }
 
 .input-container {
@@ -23,26 +24,60 @@ body {
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
+    width: 300px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(17, 53, 41);
 }
+
+
 
 label {
     margin-bottom: 5%;
 }
 
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(42, 100, 83);
+    box-sizing: border-box;
+    padding-top: 8px;
+    width: 100%;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+
+
 button {
     width: 80%;
-    height: 18%;
+    height: 70px;
     background-color: cornflowerblue;
     font-size: larger;
     font-weight: bold;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     cursor: pointer;
     text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 5px #999;
+    opacity: 0.5;
+}
+
+button:hover {
+    opacity: 1;
+}
+
+button:active {
+    background-color: rgb(33, 33, 51);
+    color: white;
+    transform: translateY(5px);
 }
 
 .grid-container {
-    width: 60%;
-    height: 500px;
+    width: 70%;
+    height: 750px;
     border: 10px solid rgb(48, 29, 29);
     background-color: white;
 
@@ -60,12 +95,13 @@ button {
     justify-content: center;
     align-items: center;
     background-color: rgb(16, 16, 66);
-    padding: 10px;
-    width: 180px;
+    padding-top: 10px;
+    width: 100%;
+    padding-bottom: 15px;
 }
 
 #custom {
-    width: 150px;
+    width: 250px;
     border: none;
     height: 50px;
 }
@@ -75,8 +111,13 @@ footer {
 }
 
 .scale {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    background-color: rgb(45, 68, 61);
+    padding: 8px;
+    width: 95%;
+    height: 100px;
 }
 
 /*This a design for a half the screen on a desktop view*/
@@ -88,6 +129,7 @@ footer {
     .main-container{
         display: flex;
         flex-direction: column;
+        width: 100%;
 
     }
 
@@ -103,11 +145,13 @@ footer {
         background-color: rgb(16, 16, 66);
         height: 50px;
         width: auto;
+        padding: 10px;
     }
 
     .buttons {
         background-color: rgb(42, 100, 83);
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
         box-sizing: border-box;
         padding-top: 8px;
         width: 100%;
@@ -140,7 +184,7 @@ footer {
         border: 10px solid rgb(48, 29, 29);
         background-color: white;
         margin-top: 1px;
-        margin-left: 10px;
+        margin-left: 5px;
     
     }
 
@@ -154,7 +198,7 @@ footer {
         color: white;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-weight: bold;
-        margin-left: 20px;
+        margin-left: 5px;
     }
     
 
@@ -162,8 +206,9 @@ footer {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
-        padding: 20px;
         background-color: rgb(45, 68, 61);
+        width: 97.5%;
+        height: 30px;
     }
 
     #scale {
@@ -179,12 +224,13 @@ footer {
 }
 
 @media (max-width: 500px) {
-    body {
-        padding-right: 2px;
+    .main-container {
+        width: 90%;
     }
     .input-container {
         display: flex;
         flex-direction: column;
+        width: 100%;
     }
 
     h1, footer {
@@ -195,16 +241,13 @@ footer {
         display: grid;
         grid-template-columns: repeat(2, 3fr);
         background-color: rgb(16, 16, 66);
-        padding: 10px;
         height: 50px;
-        width: auto;
     }
 
     #custom {
         width: 150px;
         border: none;
         height: 50px;
-        margin-left: auto;
     }
 
     .buttons {
@@ -213,8 +256,8 @@ footer {
         grid-template-columns: repeat(1, 1fr);
         background-color: rgb(42, 100, 83);
         box-sizing: border-box;
-        padding-top: 8px;
         width: 100%;
+        padding: 20px;
         gap: 5px;
         overflow: scroll;
     }
@@ -242,8 +285,8 @@ footer {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
-        padding: 20px;
         background-color: rgb(45, 68, 61);
+        width: 95%;
     }
 
 }
