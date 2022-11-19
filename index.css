@@ -42,6 +42,7 @@ button {
 
 .grid-container {
     width: 60%;
+    height: 500px;
     border: 10px solid rgb(48, 29, 29);
     background-color: white;
 
@@ -83,7 +84,6 @@ footer {
     body {
         width: 90%;
         margin: 0;
-        padding-left: 2.5%;
     }
     .main-container{
         display: flex;
@@ -180,12 +180,8 @@ footer {
 
 @media (max-width: 500px) {
     body {
-        width: 300px;
-        margin: 0;
-        padding-left: 6%;
+        padding-right: 2px;
     }
-
-
     .input-container {
         display: flex;
         flex-direction: column;
@@ -213,7 +209,7 @@ footer {
 
     .buttons {
         display: grid;
-        height: 70px;
+        height: 100px;
         grid-template-columns: repeat(1, 1fr);
         background-color: rgb(42, 100, 83);
         box-sizing: border-box;
